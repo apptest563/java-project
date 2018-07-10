@@ -5,7 +5,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr:'3'))
   }
   
-  stages {
+  stages {  
     stage ('build') {
       steps {
         sh 'ant -f build.xml -v'
